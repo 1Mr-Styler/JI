@@ -19,6 +19,7 @@
 		6681603A1ECCF868001AB2F8 /* smrr.png in Resources */ = {isa = PBXBuildFile; fileRef = 668160391ECCF868001AB2F8 /* smrr.png */; };
 		6681603C1ECCFB2C001AB2F8 /* rrr.png in Resources */ = {isa = PBXBuildFile; fileRef = 6681603B1ECCFB2C001AB2F8 /* rrr.png */; };
 		6681603E1ECCFF75001AB2F8 /* screenshot.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6681603D1ECCFF75001AB2F8 /* screenshot.jpeg */; };
+		668D91841ED243F900E221BC /* Levenshtein.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668D91831ED243F900E221BC /* Levenshtein.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		668160391ECCF868001AB2F8 /* smrr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smrr.png; sourceTree = "<group>"; };
 		6681603B1ECCFB2C001AB2F8 /* rrr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rrr.png; sourceTree = "<group>"; };
 		6681603D1ECCFF75001AB2F8 /* screenshot.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = screenshot.jpeg; sourceTree = "<group>"; };
+		668D91831ED243F900E221BC /* Levenshtein.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Levenshtein.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,16 +110,12 @@
 		668160031ECC8BC5001AB2F8 /* JI */ = {
 			isa = PBXGroup;
 			children = (
-				668160331ECC93F7001AB2F8 /* der.png */,
-				668160391ECCF868001AB2F8 /* smrr.png */,
-				6681603B1ECCFB2C001AB2F8 /* rrr.png */,
+				6681603F1ECD08E7001AB2F8 /* resources */,
 				668160041ECC8BC5001AB2F8 /* AppDelegate.swift */,
-				668160311ECC8EEE001AB2F8 /* rr.png */,
-				6681602F1ECC8BEE001AB2F8 /* neuron.png */,
 				668160061ECC8BC5001AB2F8 /* ViewController.swift */,
 				668160081ECC8BC5001AB2F8 /* Assets.xcassets */,
 				6681600A1ECC8BC5001AB2F8 /* Main.storyboard */,
-				6681600D1ECC8BC5001AB2F8 /* Info.plist */,
+				668D91831ED243F900E221BC /* Levenshtein.swift */,
 			);
 			path = JI;
 			sourceTree = "<group>";
@@ -138,6 +136,19 @@
 				668160231ECC8BC5001AB2F8 /* Info.plist */,
 			);
 			path = JIUITests;
+			sourceTree = "<group>";
+		};
+		6681603F1ECD08E7001AB2F8 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				668160331ECC93F7001AB2F8 /* der.png */,
+				668160391ECCF868001AB2F8 /* smrr.png */,
+				6681603B1ECCFB2C001AB2F8 /* rrr.png */,
+				668160311ECC8EEE001AB2F8 /* rr.png */,
+				6681602F1ECC8BEE001AB2F8 /* neuron.png */,
+				6681600D1ECC8BC5001AB2F8 /* Info.plist */,
+			);
+			name = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				668160071ECC8BC5001AB2F8 /* ViewController.swift in Sources */,
+				668D91841ED243F900E221BC /* Levenshtein.swift in Sources */,
 				668160051ECC8BC5001AB2F8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -531,6 +543,7 @@
 				668160281ECC8BC5001AB2F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		668160291ECC8BC5001AB2F8 /* Build configuration list for PBXNativeTarget "JITests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +552,7 @@
 				6681602B1ECC8BC5001AB2F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6681602C1ECC8BC5001AB2F8 /* Build configuration list for PBXNativeTarget "JIUITests" */ = {
 			isa = XCConfigurationList;
@@ -547,6 +561,7 @@
 				6681602E1ECC8BC5001AB2F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

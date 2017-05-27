@@ -84,7 +84,8 @@ class ViewController: NSViewController {
     @IBAction func ReLu(_ sender: Any) {
         DispatchQueue.main.async {
             self.selectedFormula = max(0.0, self.n2)
-            self.result = max(0.0, (self.abs - self.selectedFormula))
+            self.result = (self.abs > self.selectedFormula) ? max(0.0, (self.abs - self.selectedFormula))
+                : max(0.0, (self.selectedFormula - self.abs ))
             self.ty = #function
             self.choiceOfVisuals(ABS: true, arrowFromABS: false, smallArrow: true)
             self.absLab = "ABS Error"
@@ -104,7 +105,8 @@ class ViewController: NSViewController {
     @IBAction func Linear(_ sender: Any) {
         self.ty = #function
         self.selectedFormula = self.linear(x: [self.n1], w: [self.n2w])
-        self.result = self.abs - self.selectedFormula
+        self.result = (self.abs > self.selectedFormula) ? self.abs - self.selectedFormula
+            :  self.selectedFormula - self.abs
         self.choiceOfVisuals(ABS: true, arrowFromABS: false, smallArrow: true)
         self.absLab = "ABS Error"
     }

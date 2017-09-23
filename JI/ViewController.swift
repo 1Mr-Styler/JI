@@ -102,11 +102,12 @@ class ViewController: NSViewController {
         }
     }
     
-    @IBAction func Linear(_ sender: Any) {
+    @IBAction func TanH(_ sender: Any) {
         self.ty = #function
-        self.selectedFormula = self.linear(x: [self.n1], w: [self.n2w])
-        self.result = (self.abs > self.selectedFormula) ? self.abs - self.selectedFormula
-            :  self.selectedFormula - self.abs
+         let z = self.linear(x: [self.n1], w: [self.n2w])
+        self.selectedFormula = (exp(z) - exp(-z))/(exp(z) + exp(-z))
+        self.result = self.selectedFormula
+        
         self.choiceOfVisuals(ABS: true, arrowFromABS: false, smallArrow: true)
         self.absLab = "ABS Error"
     }

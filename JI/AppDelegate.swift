@@ -13,6 +13,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        let window = NSApp.windows[0]
+        
+        let win = NSWindow.init(contentViewController: Costroller())
+        window.addChildWindow(win, ordered:.below)
+        win.title = "Cost/Error"
         
     }
 
